@@ -1,0 +1,27 @@
+.container {
+    width: 50%;
+    margin: auto;
+    text-align: center;
+  }
+  
+  input {
+    padding: 10px;
+    font-size: 20px;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    outline: none;
+    width: 100%;
+    max-width: 300px;
+    margin: 10px auto;
+  }
+  
+  button {
+    background-color: #4CAF50;
+    color: white;
+    padding: 10px 20px;
+    border: none;
+    border-radius: 5px;
+    font-size: 20px;
+    cursor: pointer;
+  }
+  
