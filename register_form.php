@@ -46,6 +46,7 @@ if(isset($_POST['submit'])){
          // header('location:2FA.php');
       }
    }
+   //////OTP SENDING PROCESS STARTS FROM HERE
    require 'phpmailer/src/Exception.php';
    require 'phpmailer/src/PHPMailer.php';
    require 'phpmailer/src/SMTP.php';
