@@ -11,14 +11,17 @@ if(isset($_POST['submit'])){
    $pass = md5($_POST['password']);
    $cpass = md5($_POST['cpassword']);
    $user_type = $_POST['user_type'];
+   $timee = date("h:i:sa"). " " . date("Y/m/d");
 
    $select = " SELECT * FROM user_form WHERE email = '$email' && password = '$pass' ";
+   $insert = " INSERT INTO logaccounts (email, timee) VALUES('$email', '$timee') ";
 
    $result = mysqli_query($conn, $select);
 
    if(mysqli_num_rows($result) > 0){
 
       $row = mysqli_fetch_array($result);
+      $logaccounts - mysqli_query($conn, $insert);
 
       if($row['user_type'] == 'admin' && $row['authenticated']== '1'){
 

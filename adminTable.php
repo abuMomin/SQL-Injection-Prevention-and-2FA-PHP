@@ -8,6 +8,9 @@ if(!isset($_SESSION['admin_name'])){
    header('location:login_form.php');
 }
 
+$query = "SELECT * FROM logaccounts";
+$result = $conn->query($query);
+$block = "BLOCK"
 ?>
 
 
@@ -21,49 +24,23 @@ if(!isset($_SESSION['admin_name'])){
     <link rel="stylesheet" href="css/table.css">
 </head>
 <body>
-    <table>
-        <tr>
-			<th>Column 1</th>
-			<th>Column 2</th>
-			<th>Column 3</th>
-			<th>Column 4</th>
-		</tr>
+	<table>
 		<tr>
-			<td>Row 1, Column 1</td>
-			<td>Row 1, Column 2</td>
-			<td>Row 1, Column 3</td>
-			<td><button>Button 1</button></td>
+			<th>Email</th>
+			<th>Time</th>
+			<th>Block Button</th>
 		</tr>
-		<tr>
-			<td>Row 2, Column 1</td>
-			<td>Row 2, Column 2</td>
-			<td>Row 2, Column 3</td>
-			<td><button>Button 2</button></td>
-		</tr>
-		<tr>
-			<td>Row 3, Column 1</td>
-			<td>Row 3, Column 2</td>
-			<td>Row 3, Column 3</td>
-			<td><button>Button 3</button></td>
-		</tr>
-		<tr>
-			<td>Row 4, Column 1</td>
-			<td>Row 4, Column 2</td>
-			<td>Row 4, Column 3</td>
-			<td><button>Button 4</button></td>
-		</tr>
-		<tr>
-			<td>Row 5, Column 1</td>
-			<td>Row 5, Column 2</td>
-			<td>Row 5, Column 3</td>
-			<td><button>Button 5</button></td>
-		</tr>
-		<tr>
-			<td>Row 6, Column 1</td>
-			<td>Row 6, Column 2</td>
-			<td>Row 6, Column 3</td>
-			<td><button>Button 6</button></td>
-		</tr>
-    </table>
+
+		<?php
+			while($row = $result->fetch_assoc()) {
+				echo "<tr>";
+				echo "<td>" . $row["email"] . "</td>";
+				echo "<td>" . $row["timee"] . "</td>";
+				echo "<td><button>" . $block . "</button></td>";
+				echo "</tr>";
+				}
+			$conn->close();
+		?>
+	</table>
 </body>
 </html>
