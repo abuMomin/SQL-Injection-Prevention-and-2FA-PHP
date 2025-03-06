@@ -18,8 +18,6 @@ UniHub is a secure Learning Management System (LMS) designed to facilitate seaml
 **Title:** Enhancing e-Learning Security: Implementation of Security Features on UniHub e-Learning Platform  
 **Link:** [Read the research paper](https://www.overleaf.com/read/dmfbncbmdtdf#bc959a)
 
-## License
-This project is licensed under the MIT License.
 
 ## Contributors
 We welcome contributions! Feel free to submit a pull request or open an issue.
